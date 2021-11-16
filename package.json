@@ -1,0 +1,28 @@
+{
+  "name": "showcase-your-knowledge",
+  "version": "1.0.0",
+  "description": "Quiz game ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-Spiral-Forge/showcase-your-knowledge.git"
+  },
+  "keywords": [
+    "Quiz"
+  ],
+  "author": "Abhay Parihar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-Spiral-Forge/showcase-your-knowledge/issues"
+  },
+  "homepage": "https://github.com/A-Spiral-Forge/showcase-your-knowledge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14",
+    "pug": "^3.0.2",
+    "request": "^2.88.2"
+  }
+}

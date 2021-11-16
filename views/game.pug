@@ -1,0 +1,28 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Big Fact Hunt
+        link(rel="shortcut icon", href="../static/images/bigFactHuntLogo.png", type="image/x-icon")
+        link(rel="stylesheet", href="../static/css/game.css")
+        link(rel="stylesheet", href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css")
+    body
+        div#timer
+            img(src="../static/images/timerBackground.png", alt="Timer Background")
+        form#queans(action="/game", method="post") 
+            div#que 
+                p #{que} 
+            div#options
+                input.option(type="radio", name="opt1")
+                label.optlabel(for="opt1") #{opt1}
+                input.option(type="radio", name="opt2")
+                label.optlabel(for="opt2") #{opt2}
+                input.option(type="radio", name="opt3")
+                label.optlabel(for="opt3") #{opt3}
+                input.option(type="radio", name="opt4")
+                label.optlabel(for="opt4") #{opt4}
+            div#buttons 
+                button#end End
+                button#skip Skip
+                button#submit Submit
