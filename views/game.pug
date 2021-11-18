@@ -6,23 +6,23 @@ html(lang="en")
         title Big Fact Hunt
         link(rel="shortcut icon", href="../static/images/bigFactHuntLogo.png", type="image/x-icon")
         link(rel="stylesheet", href="../static/css/game.css")
+        link(rel="stylesheet", href="../static/css/timer.css")
         link(rel="stylesheet", href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css")
     body
-        div#timer
-            img(src="../static/images/timerBackground.png", alt="Timer Background")
-        form#queans(action="/game", method="post") 
-            div#que 
-                p #{que} 
-            div#options
-                input.option(type="radio", name="opt1")
-                label.optlabel(for="opt1") #{opt1}
-                input.option(type="radio", name="opt2")
-                label.optlabel(for="opt2") #{opt2}
-                input.option(type="radio", name="opt3")
-                label.optlabel(for="opt3") #{opt3}
-                input.option(type="radio", name="opt4")
-                label.optlabel(for="opt4") #{opt4}
+        div#app 
+        div#queans
+            div#quediv
+                p#que
+            form#options(action=`/game`, method="post")
+                input.option(label="opt1" type="radio" id="opt1" name="gender" value="opt1")
+                input.option(label="opt2" type="radio" id="opt2" name="gender" value="opt2")
+                input.option(label="opt3" type="radio" id="opt3" name="gender" value="opt3")
+                input.option(label="opt4" type="radio" id="opt4" name="gender" value="opt4")
             div#buttons 
                 button#end End
                 button#skip Skip
                 button#submit Submit
+
+        script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+        script(src="../static/js/game.js") 
+        script(src="../static/js/timer.js") 

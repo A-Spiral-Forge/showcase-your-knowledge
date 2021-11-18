@@ -24,6 +24,9 @@ app.get('/game', function (req, res) {
     res.status(200).render('queTemplate');
 });
 
+let queNumber = 0;
+let questions ;
+
 app.post('/game', function (req, res) {
     const topic = req.body.selecttopic;
     // console.log(topic);
@@ -33,9 +36,11 @@ app.post('/game', function (req, res) {
         topicLink = `https://api.trivia.willfry.co.uk/questions?categories=${topic}&limit=15`
     }
     request(topicLink, { json: true }, (err, res, body) => {
+
         // console.log(body);
         // Writing is to JSON file
-        fs.writeFileSync('./views/ques.json', JSON.stringify(body));
+        // fs.writeFileSync('./views/ques.json', JSON.stringify(body));
+        questions = body;
     });
     res.render('game.pug');
 });
